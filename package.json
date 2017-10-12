@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "post it notes for a practice project",
   "main": "index.js",
+  "engine":{
+    "node":"8.6.0"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BradOFarrell/postitnotes.git"
@@ -21,13 +24,11 @@
     "express": "^4.16.2",
     "mongoose": "^4.12.1"
   },
-  "engine":{
-      "node":"8.6.0"
-  },
+ 
   "scripts": {
     "start": "node server.js",
     "dev": "concurrently \"nodemon server.js\" \"cd ./client  && npm start \" ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd client && npm i && npm run builds"
+    "postinstall": "cd client && npm i && npm run build"
   }
 }

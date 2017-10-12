@@ -17,11 +17,13 @@ connection.on('error', (err) => {
 }); 
 
 app.use(bodyParser.json());
-app.get('/', (req,res) => {
-  res.send('Hello wrrrrld!')
-})
+
 
 app.use(express.static(__dirname+'/client/build'))
+
+app.get('/', (req,res) => {
+    res.send('Hello wrrrrld!')
+  })
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
